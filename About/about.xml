@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Usable Vanilla Turrets</name>
+	<author>Heugene, Lemmar</author>
+    <packageId>Heugene.UsableVanillaTurrets</packageId>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+    <description>Make vanilla turrets actually usable and centered</description>
+</ModMetaData>

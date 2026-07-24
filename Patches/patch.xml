@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+<!--  Mini turret  -->
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Gun_MiniTurret"]/statBases</xpath>
+  <value>
+    <statBases>
+        <AccuracyTouch>0.95</AccuracyTouch>
+        <AccuracyShort>0.8</AccuracyShort>
+        <AccuracyMedium>0.67</AccuracyMedium>
+        <AccuracyLong>0.48</AccuracyLong>
+        <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+        <DeteriorationRate>0</DeteriorationRate>
+        <Mass>5</Mass>
+        <Flammability>0</Flammability>
+    </statBases>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_MiniTurret"]/building/turretBurstCooldownTime</xpath>
+  <value>
+        <turretBurstCooldownTime>1</turretBurstCooldownTime>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_MiniTurret"]/costList</xpath>
+  <value>
+    <costList>
+        <Gold>4</Gold>
+        <Silver>25</Silver>
+        <Steel>90</Steel>
+        <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Gun_MiniTurret"]/verbs/li[verbClass="Verb_Shoot"]/burstShotCount</xpath>
+  <value>
+        <burstShotCount>1</burstShotCount>
+  </value>
+</Operation>
+
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_MiniTurret"]/statBases/ShootingAccuracyTurret</xpath>
+  <value>
+        <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_MiniTurret"]/comps/li[@Class="CompProperties_Explosive"]/explosiveRadius</xpath>
+  <value>
+        <explosiveRadius>1.9</explosiveRadius>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_MiniTurret"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+  <value>
+        <basePowerConsumption>100</basePowerConsumption>
+  </value>
+</Operation>
+
+<!--  Autocannon turret  -->
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[@Name="AutocannonTurret"]/size</xpath>
+  <value>
+    <size>(3,3)</size>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[@Name="AutocannonTurret"]/graphicData/drawSize</xpath>
+  <value>
+    <drawSize>(2.25,2.25)</drawSize>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+  <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/building</xpath>
+  <value>
+    <turretTopDrawSize>3.5</turretTopDrawSize>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Gun_AutocannonTurret"]/statBases</xpath>
+  <value>
+    <statBases>
+        <AccuracyTouch>0.43</AccuracyTouch>
+        <AccuracyShort>0.83</AccuracyShort>
+        <AccuracyMedium>0.89</AccuracyMedium>
+        <AccuracyLong>0.96</AccuracyLong>
+        <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+        <DeteriorationRate>0</DeteriorationRate>
+        <Mass>40</Mass>
+        <Flammability>0</Flammability>
+    </statBases>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/statBases/ShootingAccuracyTurret</xpath>
+  <value>
+        <ShootingAccuracyTurret>0.98</ShootingAccuracyTurret>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/costList</xpath>
+  <value>
+    <costList>
+        <Gold>30</Gold>
+        <Silver>120</Silver>
+        <Steel>350</Steel>
+        <Plasteel>40</Plasteel>
+        <ComponentIndustrial>6</ComponentIndustrial>
+        <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Gun_AutocannonTurret"]/verbs/li[verbClass="Verb_Shoot"]/burstShotCount</xpath>
+  <value>
+        <burstShotCount>4</burstShotCount>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Gun_AutocannonTurret"]/verbs/li[verbClass="Verb_Shoot"]/range</xpath>
+  <value>
+        <range>38</range>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+  <value>
+        <fuelCapacity>80</fuelCapacity>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Bullet_AutocannonTurret"]/projectile</xpath>
+  <value>
+    <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>27</damageAmountBase>
+        <speed>88</speed>
+        <stoppingPower>1</stoppingPower>
+    </projectile>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/comps/li[@Class="CompProperties_Explosive"]/explosiveRadius</xpath>
+  <value>
+        <explosiveRadius>4.9</explosiveRadius>
+  </value>
+</Operation>
+
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+  <value>
+        <basePowerConsumption>320</basePowerConsumption>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[@Name="AutocannonTurret"]/statBases/MaxHitPoints</xpath>
+  <value>
+        <MaxHitPoints>600</MaxHitPoints>
+  </value>
+</Operation>
+
+<!-- Sniper Turret  -->
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Gun_TurretSniper"]/statBases</xpath>
+  <value>
+    <statBases>
+        <AccuracyTouch>0.22</AccuracyTouch>
+        <AccuracyShort>0.33</AccuracyShort>
+        <AccuracyMedium>0.74</AccuracyMedium>
+        <AccuracyLong>0.99</AccuracyLong>
+        <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+        <DeteriorationRate>0</DeteriorationRate>
+        <Mass>40</Mass>
+        <Flammability>0</Flammability>
+    </statBases>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Sniper"]/building/turretBurstCooldownTime</xpath>
+  <value>
+        <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Sniper"]/statBases/ShootingAccuracyTurret</xpath>
+  <value>
+        <ShootingAccuracyTurret>0.99</ShootingAccuracyTurret>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Sniper"]/costList</xpath>
+  <value>
+    <costList>
+        <Gold>35</Gold>
+        <Silver>200</Silver>
+        <Steel>300</Steel>
+        <Plasteel>30</Plasteel>
+        <Uranium>60</Uranium>
+        <ComponentIndustrial>8</ComponentIndustrial>
+        <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Bullet_TurretSniper"]/projectile</xpath>
+  <value>
+    <projectile>
+        <damageDef>Bullet</damageDef>
+        <damageAmountBase>70</damageAmountBase>
+        <stoppingPower>1.7</stoppingPower>
+        <speed>160</speed>
+    </projectile>
+  </value>
+</Operation>
+
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Sniper"]/comps/li[@Class="CompProperties_Explosive"]/explosiveRadius</xpath>
+  <value>
+        <explosiveRadius>4.9</explosiveRadius>
+  </value>
+</Operation>
+
+
+<Operation Class="PatchOperationReplace">
+  <xpath>Defs/ThingDef[defName="Turret_Sniper"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
+  <value>
+        <basePowerConsumption>450</basePowerConsumption>
+  </value>
+</Operation>
+
+<Operation Class="PatchOperationAdd">
+  <xpath>Defs/ThingDef[defName="Turret_Sniper"]/building</xpath>
+  <value>
+    <turretTopDrawSize>4</turretTopDrawSize>
+  </value>
+</Operation>
+
+<!-- Odyssey compatibility -->
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AncientAutocannonTurret"]</xpath>
+    <value>
+      <size>(3,3)</size>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AncientAutocannonTurret"]/graphicData</xpath>
+    <value>
+      <drawSize>(3.45,3.45)</drawSize>
+      <drawOffset>(0,0,-0.1)</drawOffset>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AncientUraniumSlugTurret"]</xpath>
+    <value>
+      <size>(3,3)</size>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="AncientUraniumSlugTurret"]/graphicData</xpath>
+    <value>
+      <drawSize>(3.45,3.45)</drawSize>
+      <drawOffset>(0,0,-0.1)</drawOffset>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationReplace">
+    <xpath>Defs/PrefabDef[defName="AutoturretBarricade"]/things/Barricade/rects</xpath>
+    <value>
+      <rects>
+        <li>(0,0,4,0)</li>
+        <li>(16,0,20,0)</li>
+        <li>(0,1,0,4)</li>
+        <li>(4,1,4,2)</li>
+        <li>(16,1,16,2)</li>
+        <li>(20,1,20,4)</li>
+        <li>(9,2,11,2)</li>
+        <li>(9,3,9,3)</li>
+        <li>(11,3,11,3)</li>
+        <li>(1,4,2,4)</li>
+        <li>(18,4,19,4)</li>
+        <li>(2,9,3,9)</li>
+        <li>(17,9,18,9)</li>
+        <li>(2,10,2,11)</li>
+        <li>(18,10,18,11)</li>
+        <li>(3,11,3,11)</li>
+        <li>(17,11,17,11)</li>
+        <li>(0,16,2,16)</li>
+        <li>(18,16,20,16)</li>
+        <li>(0,17,0,20)</li>
+        <li>(9,17,9,18)</li>
+        <li>(11,17,11,18)</li>
+        <li>(20,17,20,20)</li>
+        <li>(4,18,4,20)</li>
+        <li>(10,18,10,18)</li>
+        <li>(16,18,16,20)</li>
+        <li>(1,20,3,20)</li>
+        <li>(17,20,19,20)</li>
+      </rects>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationReplace">
+    <xpath>Defs/PrefabDef[defName="AutoturretBarricade"]/things/Turret_Sniper/position</xpath>
+    <value>
+      <position>(18, 0, 2)</position>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationReplace">
+    <xpath>Defs/PrefabDef[defName="AutoturretBarricade"]/things/Turret_Autocannon/position</xpath>
+    <value>
+      <position>(2, 0, 18)</position>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationReplace">
+    <xpath>Defs/PrefabDef[defName="AutoturretBarricade"]/things/AncientAutocannonTurret/position</xpath>
+    <value>
+      <position>(18, 0, 18)</position>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationReplace">
+    <xpath>Defs/PrefabDef[defName="SolarArray"]/things/Barricade/rects</xpath>
+    <value>
+      <rects>
+        <li>(6,6,9,6)</li>
+        <li>(11,6,14,6)</li>
+        <li>(6,7,6,9)</li>
+        <li>(14,7,14,9)</li>
+        <li>(6,11,6,14)</li>
+        <li>(14,11,14,14)</li>
+        <li>(7,14,9,14)</li>
+        <li>(11,14,13,14)</li>
+      </rects>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationReplace">
+    <xpath>Defs/PrefabDef[defName="SolarArray"]/things/AncientUraniumSlugTurret/positions</xpath>
+    <value>
+      <positions>
+        <li>(8, 0, 8)</li>
+        <li>(12, 0, 8)</li>
+        <li>(8, 0, 12)</li>
+      </positions>
+    </value>
+  </match>
+</Operation>
+
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Odyssey</li>
+  </mods>
+  <match Class="PatchOperationReplace">
+    <xpath>Defs/PrefabDef[defName="SolarArray"]/things/Turret_Sniper/position</xpath>
+    <value>
+      <position>(12, 0, 12)</position>
+    </value>
+  </match>
+</Operation>
+
+</Patch>
