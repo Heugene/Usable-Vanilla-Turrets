@@ -148,14 +148,22 @@
   </value>
 </Operation>
 
+<Operation Class="PatchOperationAdd">
+  <xpath>Defs/ThingDef[defName="Bullet_AutocannonTurret"]</xpath>
+  <value>
+    <thingClass>Projectile_Explosive</thingClass>
+  </value>
+</Operation>
+
 <Operation Class="PatchOperationReplace">
   <xpath>Defs/ThingDef[defName="Bullet_AutocannonTurret"]/projectile</xpath>
   <value>
     <projectile>
-        <damageDef>Bullet</damageDef>
+        <damageDef>Bomb</damageDef>
         <damageAmountBase>27</damageAmountBase>
         <speed>88</speed>
         <stoppingPower>1</stoppingPower>
+        <explosionRadius>0.9</explosionRadius>
     </projectile>
   </value>
 </Operation>
