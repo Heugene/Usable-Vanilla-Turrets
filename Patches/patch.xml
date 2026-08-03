@@ -175,6 +175,12 @@
   </value>
 </Operation>
 
+<Operation Class="PatchOperationAdd">
+  <xpath>Defs/ThingDef[defName="Gun_AutocannonTurret"]/verbs/li</xpath>
+  <value>
+    <forcedMissRadius>0.5</forcedMissRadius>
+  </value>
+</Operation>
 
 <Operation Class="PatchOperationReplace">
   <xpath>Defs/ThingDef[defName="Turret_Autocannon"]/comps/li[@Class="CompProperties_Power"]/basePowerConsumption</xpath>
