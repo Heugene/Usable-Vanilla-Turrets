@@ -5,6 +5,7 @@
     <packageId>Heugene.UsableVanillaTurrets</packageId>
     <supportedVersions>
         <li>1.6</li>
+        <li>1.7</li>
     </supportedVersions>
     <description>Make vanilla turrets actually usable and centered</description>
 </ModMetaData>
